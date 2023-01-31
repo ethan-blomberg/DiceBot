@@ -26,7 +26,20 @@ Brass D20 from precisionplaydice.com
 
 ## Where I Am Now
 
+### Preprocessing
+Capture image -> grayscale -> blur -> edge detection -> circle detection -> crop 
 
+> Note: Circle detection will most-likely only work on D20s. Need to find a general method for all dice
+
+Now I have a small ~200px gray image of just the die, and a copy of the original image with the die outlined.
+
+Optionally, repeat circle detection and crop on the small image, to get ~40px image of just the digit(s). This currently works for my specific D20. I am confident an MNIST-trained model could recognize faces 1-9. All my parameters for the various image processing methods seem to work fine but may be optimized. I’m not sure how to do this besides trial and error (which is how I found my current params).
+
+> This preprocess will be used for creating a labeled data set for training, or transfer learning later. I can roll dice anywhere in the camera’s FOV and it will return roughly the same size image of just the die. Pretty satisfying.
+
+<p align="center">
+  <img src="https://photos.app.goo.gl/HEKuwfryTMX4GaY88"/>
+</p>
 
 ## License
 
