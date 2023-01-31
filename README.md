@@ -38,7 +38,7 @@ Optionally, repeat circle detection and crop on the small image, to get ~40px im
 > This preprocess will be used for creating a labeled data set for training, or transfer learning later. I can roll dice anywhere in the camera’s FOV and it will return roughly the same size image of just the die. Pretty satisfying.
 
 <p align="center">
-  <img src="https://photos.app.goo.gl/HEKuwfryTMX4GaY88](https://imgur.com/a/CCzMNnw)"/>
+  <blockquote class="imgur-embed-pub" lang="en" data-id="a/CCzMNnw"  ><a href="//imgur.com/a/CCzMNnw">Dice results</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
 </p>
 
 ## License
