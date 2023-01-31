@@ -37,9 +37,22 @@ Optionally, repeat circle detection and crop on the small image, to get ~40px im
 
 > This preprocess will be used for creating a labeled data set for training, or transfer learning later. I can roll dice anywhere in the camera’s FOV and it will return roughly the same size image of just the die. Pretty satisfying.
 
-<p align="center">
-  <blockquote class="imgur-embed-pub" lang="en" data-id="a/CCzMNnw"  ><a href="//imgur.com/a/CCzMNnw">Dice results</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-</p>
+### Creating Datasets for Training
+Start with the first face and capture an image, preprocess (above) and resize to ~32px and save to a directory named with the label. Repeat while adjusting lighting and rotation with external peripherals, as well as digitally skewing and rotating each of these in post-processing to create a larger data set. After ~1000 images are saved in the labeled directory, prompt the user to rotate to the next face, then repeat. 
+
+> This code is complete minus post-processing but has not been executed. 
+
+### Preparing Datasets for Training
+Extract a random ~20% of images from each directory to set aside for testing/validation. 
+
+Flatten image matrix and label at the 0-index. Should be of length equal to the number of pixels + 1 for its label. 
+
+Add this vector to the main training data matrix to have dimensions: number of pixels+1 by number of images.
+
+> This code is complete but has not been executed. 
+
+### Neural Network
+Currently working from scratch with just numpy. I found a good tutorial for this using MNIST as it’s example. I may switch to Tensorflow or similar for time/complexity constraints. 
 
 ## License
 
