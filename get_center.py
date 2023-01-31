@@ -2,7 +2,6 @@ import cv2 as cv #version 4.1.1
 import numpy as np
 import time
 import imutils
-import matplotlib.pyplot as plt
 
 def gstreamer_pipeline(
     sensor_id=0,
